@@ -11,7 +11,7 @@ const Query = {
     async getMovieByTitle( _, {title}) {
         const oneMovie = await Movie.findOne({title: title});
         return oneMovie;
-    },
+    }
 }
 
 export default Query

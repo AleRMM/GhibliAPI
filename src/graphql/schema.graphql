@@ -17,7 +17,7 @@ type Mutation {
         picture_url: String,
         trailer_url: String,
         likes: Int
-        ) : Movie
+    ) : Movie
 
 #UPDATE
     updateMovie(
@@ -32,11 +32,10 @@ type Mutation {
         picture_url: String,
         trailer_url: String,
         likes: Int
-        ) : Movie
+    ) : Movie
 
 #DELETE
     deleteMovie(_id: ID) : [Movie]
-}
 
 type Movie {
     _id : ID
