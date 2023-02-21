@@ -27,14 +27,7 @@ const Mutation = {
     async deleteMovie(_, {_id}) {
         await Movie.findByIdAndDelete(_id)
         return await Movie.find()
-    },
-
-//CREATE USER
-    async register(_, {username, email, password}) {
-        const newUser = {username, email, password};
-        const user = await User.create(newUser);
-        return user
-    },
+    }
 }
 
 export default Mutation
