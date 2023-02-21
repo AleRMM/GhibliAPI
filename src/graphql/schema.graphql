@@ -1,5 +1,8 @@
 type Query {
     getMovies: [Movie]
+#LOGIN
+    login(email:String, password:String) : String
+
     getMovieByTitle(title:String): Movie
 }
 
@@ -17,7 +20,7 @@ type Mutation {
         picture_url: String,
         trailer_url: String,
         likes: Int
-        ) : Movie
+    ) : Movie
 
 #UPDATE
     updateMovie(
@@ -32,10 +35,18 @@ type Mutation {
         picture_url: String,
         trailer_url: String,
         likes: Int
-        ) : Movie
+    ) : Movie
 
 #DELETE
     deleteMovie(_id: ID) : [Movie]
+
+#REGISTER
+    register(
+        username: String, 
+        email: String, 
+        password: String
+    ) : User
+
 }
 
 type Movie {
@@ -50,4 +61,11 @@ type Movie {
     picture_url: String
     trailer_url: String
     likes: Int
+}
+
+type User {
+    _id : ID
+    username: String
+    email: String 
+    password: String
 }
