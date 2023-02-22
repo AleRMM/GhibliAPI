@@ -41,6 +41,10 @@ const movieSchema = new Schema({
         type: Number,
         required: false
     }
+},{
+    //Create_at and updated_at
+    timestamps: true,
+    versionKey: false
 })
 
 export default model ("Movie", movieSchema)
